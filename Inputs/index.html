@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High-End Input Fields</title>
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      padding: 40px 20px;
+      color: #333;
+    }
+    h2 {
+      margin-top: 40px;
+      text-align: center;
+      color: #444;
+    }
+    .input-section {
+      margin: 40px auto;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    /* 1. Floating Label Input */
+    .floating-input-container {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .floating-input-container input {
+      width: 100%;
+      padding: 16px 12px 12px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      background: white;
+      transition: border-color 0.3s ease;
+    }
+
+    .floating-input-container label {
+      position: absolute;
+      top: 16px;
+      left: 12px;
+      font-size: 16px;
+      color: #aaa;
+      background: white;
+      padding: 0 5px;
+      transition: 0.3s;
+      pointer-events: none;
+    }
+
+    .floating-input-container input:focus {
+      border-color: #007bff;
+    }
+
+    .floating-input-container input:focus + label,
+    .floating-input-container input:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 8px;
+      font-size: 12px;
+      color: #007bff;
+    }
+
+    /* 2. Underline Only Input */
+    .underline-input-container input {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #999;
+      font-size: 16px;
+      padding: 10px 5px;
+      background: transparent;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .underline-input-container input:focus {
+      border-bottom-color: #007bff;
+    }
+
+    /* 3. Boxed Shadow Input */
+    .shadow-input-box input {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .shadow-input-box input:focus {
+      box-shadow: 0 2px 12px rgba(0, 123, 255, 0.4);
+    }
+
+    /* 4. Rounded Pill Input */
+    .pill-input-container input {
+      width: 100%;
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 999px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .pill-input-container input:focus {
+      border-color: #28a745;
+    }
+
+    /* 5. Glassmorphism Input */
+    .glass-input-container {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .glass-input-container input {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      outline: none;
+    }
+
+    .glass-input-container input::placeholder {
+      color: #eee;
+    }
+
+    .glass-section {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .input-section {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Floating Label Input</h2>
+  <div class="input-section">
+    <div class="floating-input-container">
+      <input type="text" id="full-name" placeholder=" " />
+      <label for="full-name">Full Name</label>
+    </div>
+  </div>
+
+  <h2>2. Underlined Input</h2>
+  <div class="input-section underline-input-container">
+    <input type="text" placeholder="Email address" />
+  </div>
+
+  <h2>3. Shadowed Input Box</h2>
+  <div class="input-section shadow-input-box">
+    <input type="text" placeholder="Username" />
+  </div>
+
+  <h2>4. Rounded Pill Input</h2>
+  <div class="input-section pill-input-container">
+    <input type="text" placeholder="Search..." />
+  </div>
+
+  <h2>5. Glassmorphism Input</h2>
+  <div class="input-section glass-section">
+    <div class="glass-input-container">
+      <input type="text" placeholder="Enter your idea..." />
+    </div>
+  </div>
+
+</body>
+</html>

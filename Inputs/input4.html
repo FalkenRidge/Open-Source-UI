@@ -1,0 +1,33 @@
+<style>
+    .pill-input-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    }
+
+    .pill-input-container input {
+        width: 100%;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        border-radius: 999px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .pill-input-container input:focus {
+        border-color: #28a745;
+    }
+
+    @media (max-width: 768px) {
+        .pill-input-container {
+            max-width: 90%;
+        }
+    }
+
+</style>
+<!-- Pill-shaped input (For modern UX/UI) -->
+<link rel="stylesheet" href="styles/input4.css" />
+<div class="pill-input-container">
+  <input type="text" placeholder="Search..." />
+</div>

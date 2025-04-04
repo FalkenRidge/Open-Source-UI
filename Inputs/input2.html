@@ -1,0 +1,35 @@
+<style>
+    .underline-input-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    .underline-input-container input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #999;
+        font-size: 16px;
+        padding: 10px 5px;
+        outline: none;
+        background: transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    .underline-input-container input:focus {
+        border-bottom-color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+        .underline-input-container {
+            max-width: 90%;
+    }
+    }
+
+</style>
+
+<!-- Underlined input (Ideal for minimal UIs) -->
+<link rel="stylesheet" href="styles/input2.css" />
+<div class="underline-input-container">
+  <input type="text" placeholder="Email address" />
+</div>

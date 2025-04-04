@@ -1,0 +1,35 @@
+<style>
+    .shadow-input-box {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+        .shadow-input-box input {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        outline: none;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .shadow-input-box input:focus {
+        box-shadow: 0 2px 12px rgba(0, 123, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+        .shadow-input-box {
+            max-width: 90%;
+    }
+}
+
+</style>
+
+<!-- Shadowed input box (Great for dark/light cards) -->
+<link rel="stylesheet" href="styles/input3.css" />
+<div class="shadow-input-box">
+  <input type="text" placeholder="Username" />
+</div>
