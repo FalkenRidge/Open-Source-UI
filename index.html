@@ -10,6 +10,7 @@
   <!-- Header -->
   <header class="header">
     <div class="logo">HTML Components</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav class="navbar">
       <ul class="menu">
         <li class="dropdown">Inputs
@@ -143,5 +144,14 @@
   <footer class="footer">
     <p>&copy; 2025 HTML Components. All rights reserved.</p>
   </footer>
+
+  
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+  
 </body>
 </html>
