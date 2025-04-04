@@ -72,7 +72,7 @@
   
   .dropdown-sub:hover > .sub-dropdown {
     display: block;
-    background-color: #a4a0a0;
+    background-color: #ffffff;
     left: 100%;
     top: 0;
   }
